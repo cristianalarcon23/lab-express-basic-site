@@ -1,0 +1,12 @@
+body {
+    background-color: antiquewhite;
+    font-family: 'Nanum Myeongjo', serif;
+    display: grid;
+    text-align: center;
+    align-content: center;
+
+  }
+
+.image {
+  padding-top: 10px;
+}

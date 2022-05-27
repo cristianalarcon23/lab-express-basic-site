@@ -4,12 +4,16 @@ const app = express();
 
 app.use(express.static('public'));
 
-app.get("/home", (request, res, next) => {
-    res.send("<h1>Hola</h1>")
-})
-//sendFILE!!!!!!
-app.get("/public", (request, res, next) => {
-    res.sendFile(__dirname + '/views/algohtml')
+app.get("/", (request, res, next) => {
+    res.sendFile(__dirname + '/views/home.html')
 })
 
-app.listen(3000, () => console.log('🚀 My first app listening on port 3000! '));
+app.get("/about", (request, res, next) => {
+    res.sendFile(__dirname + '/views/about.html')
+})
+
+app.get("/gallery", (request, res, next) => {
+    res.sendFile(__dirname + '/views/gallery.html')
+})
+
+app.listen(3000, () => console.log('Connected on port 3000!'));
